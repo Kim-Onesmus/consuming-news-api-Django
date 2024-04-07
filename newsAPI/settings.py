@@ -125,4 +125,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 load_dotenv()
-URL = os.getenv('url')
+API_URL = os.getenv('api_url')
+CATEGORY_URL = os.getenv('category_url')
+COUNTRY_URL = os.getenv('country_url')
