@@ -11,7 +11,7 @@
 -Create a .env file
 
 -Go to <a href="https://newsapi.org/">https://newsapi.org/</a> create an account and click get API Key
--Copy api url and api key and add then in your .env file
+-Copy api key and paste it in the views.py
 
 -Activate virtual environment
 ```.\.venv\Scripts\activate```
