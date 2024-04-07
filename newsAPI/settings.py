@@ -1,5 +1,4 @@
 from pathlib import Path
-from dotenv import load_dotenv, dotenv_values
 import os
 
 
@@ -123,8 +122,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-load_dotenv()
-API_URL = os.getenv('api_url')
-CATEGORY_URL = os.getenv('category_url')
-COUNTRY_URL = os.getenv('country_url')

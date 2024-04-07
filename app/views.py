@@ -1,28 +1,25 @@
 from django.shortcuts import render
-from django.conf import settings
 import requests
-# Create your views here.
 
-news_url = settings.API_URL
-country_url = settings.COUNTRY_URL
-category_url = settings.CATEGORY_URL
+# Create your views here.
+API_KEY = ''
 
 def Home(request):
     country = request.GET.get('country')
 
     category = request.GET.get('category')
     if country:
-        url = country_url
+        url = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}'
         response = requests.get(url)
         data = response.json()
         articles = data['articles']
     elif category:
-        url = category_url
+        url = f'https://newsapi.org/v2/top-headlines?country={category}&apiKey={API_KEY}'
         response = requests.get(url)
         data = response.json()
         articles = data['articles']
     else:
-        url = news_url
+        url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
         response = requests.get(url)
         data = response.json()
         articles = data['articles']
