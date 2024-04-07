@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>News App</h1>
-    <p>{{ data }}</p>
+    {% for i in articles %}
+    <p>{{ i }}</p>
+    {% endfor %}
 </body>
 </html>

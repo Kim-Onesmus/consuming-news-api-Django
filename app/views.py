@@ -5,12 +5,13 @@ import requests
 API_KEY = 'aeeace275047440788ac8885dd143e23'
 
 def Home(request):
-    url = 'https://newsapi.org/v2/everything?q=tesla&from=2024-03-07&sortBy=publishedAt&apiKey={API_KEY}'
+    url = f'https://newsapi.org/v2/everything?q=tesla&from=2024-03-07&sortBy=publishedAt&apiKey={API_KEY}'
     response = requests.get(url)
     data = response.json()
-    print(data)
+    articles = data['articles']
 
     context = {
-        'data':data
+        'data':data,
+        'articles':articles
     }
     return render(request, 'app/home.html', context)
