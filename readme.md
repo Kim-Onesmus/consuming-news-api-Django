@@ -8,6 +8,11 @@
 -Create a virtual environment
 ```python -m venv .venv```
 
+-Create a .env file
+
+-Go to <a href="https://newsapi.org/">https://newsapi.org/</a> create an account and click get API Key
+-Copy api url and api key and add then in your .env file
+
 -Activate virtual environment
 ```.\.venv\Scripts\activate```
 
