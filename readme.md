@@ -1,0 +1,1 @@
+<h1>Consuming News API in django</h1>
