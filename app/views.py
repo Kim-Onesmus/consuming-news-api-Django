@@ -9,3 +9,8 @@ def Home(request):
     response = requests.get(url)
     data = response.json()
     print(data)
+
+    context = {
+        'data':data
+    }
+    return render(request, 'app/home.html', context)
