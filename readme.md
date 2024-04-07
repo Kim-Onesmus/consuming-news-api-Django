@@ -4,12 +4,16 @@
 *To install*
 -Clone the project to your machine
 ```git clone https://github.com/Kim-Onesmus/consuming-news-api-Django.git```
+
 -Create a virtual environment
 ```python -m venv .venv```
+
 -Activate virtual environment
 ```.\.venv\Scripts\activate```
+
 -Run your code
 ```python manage.py runserver```
+
 -Open your browser and type
 ```http://127.0.0.1:8000/```
 
