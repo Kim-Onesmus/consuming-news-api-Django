@@ -5,16 +5,17 @@
 -Clone the project to your machine
 ```git clone https://github.com/Kim-Onesmus/consuming-news-api-Django.git```
 
--Create a virtual environment
-```python -m venv .venv```
-
--Create a .env file
-
 -Go to <a href="https://newsapi.org/">https://newsapi.org/</a> create an account and click get API Key
 -Copy api key and paste it in the views.py
 
+-Create a virtual environment
+```python -m venv .venv```
+
 -Activate virtual environment
 ```.\.venv\Scripts\activate```
+
+-Install requirements
+```pip install -r requirements.txt```
 
 -Run your code
 ```python manage.py runserver```
