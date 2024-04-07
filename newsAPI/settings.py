@@ -1,5 +1,7 @@
 from pathlib import Path
+from dotenv import load_dotenv, dotenv_values
 import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-l#uxlt0!-3yc@&#ql_evkv)1=jm_739r=%l+3am5_^1^zrv7t_'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -119,3 +122,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+load_dotenv()
+URL = os.getenv('url')
