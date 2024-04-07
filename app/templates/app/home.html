@@ -1,14 +1,114 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News API</title>
+    <meta charset="utf-8">
+    <title>Onesmus Kimanzi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Onesmus Kimanzi Muimi, portfolio, render, python, Django M-Pesa" name="keywords">
+    <meta content="kimonesmuske@gmail.com" name="description">
+    <link rel="icon" href="{% static 'img/kim.png' %}" type="image" style="width: auto; height: auto; border-radius: 50%;">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/pop.css' %}">
+    <style>
+        .blink {
+            animation: blinker 3s step-start infinite;
+          }
+          
+          @keyframes blinker {
+            50% {
+              opacity: 0;
+            }
+          }
+    </style>
 </head>
-<body>
-    <h1>News App</h1>
-    {% for i in articles %}
-    <p>{{ i }}</p>
-    {% endfor %}
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <form method="get" id="contactForm">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" name="country" placeholder="Country"
+                                         data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="email" name="category" placeholder="Category"
+                                         data-validation-required-message="Enter category" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div style="border-bottom: 2px solid dodgerblue;" class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;"></h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest News</h1>
+            </div>
+            <br>
+            <div class="row">
+                {% for i in articles %}
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img style="height: 280px;" class="img-fluid rounded w-100" src="{{i.urlToImage}}" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">kmkmk</h4>
+                            <small class="text-white font-weight-bold text-uppercase p-4">{{i.publishedAt}}</small>
+                        </div>
+                    </div>
+                    <!-- <div class="like">
+                        <i style="font-size: 25px; color: rgb(97, 179, 179);" class="far fa-thumbs-up like-icon"></i>
+                        <span class="like-count">0</span>
+                        <i style="font-size: 25px; color: rgb(182, 109, 41);" class="far fa-thumbs-down dislike-icon"></i>
+                        <span class="dislike-count">0</span>
+                    </div> -->
+                    <h5 style="border-bottom: 2px solid cyan;">{{i.title}}</h5>
+                    <h6>{{i.description}} <span><a href="{{ i.url }}">read more</a></span></h6>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/typed/typed.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>
