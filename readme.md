@@ -1,6 +1,7 @@
 <h1>Consuming News API in django</h1>
 <p>This project guide explains how to consume a News API in a Django project. By integrating a News API into your Django application, you can fetch and display news articles from various sources, categories, and topics.</p>
 
+
 <h3>To install</h3>
 -Clone the project to your machine <br>
 ```git clone https://github.com/Kim-Onesmus/consuming-news-api-Django.git```
