@@ -6,6 +6,7 @@
 -Clone the project to your machine <br>
 ```git clone https://github.com/Kim-Onesmus/consuming-news-api-Django.git```
 
+
 -Go to <a href="https://newsapi.org/">https://newsapi.org/</a> create an account and click get API Key
 -Copy api key and paste it in the views.py
 
