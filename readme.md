@@ -35,5 +35,6 @@ You can filter the news by: <br>
     ```http://127.0.0.1:8000/?country=us``` <br>
     2. Category <br>
     ```http://127.0.0.1:8000/?category=Business```<br>
+    
 
 😎Happy coding😎
