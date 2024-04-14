@@ -17,10 +17,8 @@
 -Activate virtual environment<br>
 ```.\.venv\Scripts\activate```
 
-
 -Install requirements<br>
 ```pip install -r requirements.txt```
-
 
 -Run your code<br>
 ```python manage.py runserver```
